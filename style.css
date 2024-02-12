@@ -1,0 +1,51 @@
+html {
+    margin: 0;
+    padding: 0;
+    background: #eee;
+    color: black;
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 16px;
+    line-height: 1.5em;
+}
+
+body {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        padding: 2em 1.5em;
+    }
+        .LogoName {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: rgb(0, 0, 0);
+        }
+            .LogoImage {
+                padding-left: 0.5em;
+            }
+        .MenuTrigger {
+            display: block; 
+            padding: 0.375rem; 
+            margin: 0; 
+            background: transparent; 
+            border: none; 
+            appearance: none; 
+            cursor: pointer;
+        }
+            .MenuTriggerImage {
+                
+            }
+    main {
+
+    } 
+    footer {
+
+    }
