@@ -1,9 +1,37 @@
+/* KEYFRAMES */
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+
+@keyframes fade-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+
+@font-face {
+    font-family: 'Aldrich';
+    src: url('Aldrich.ttf') format('truetype');
+}
+
 html {
     margin: 0;
     padding: 0;
     background-color: #eee;
     color: rgb(255, 255, 255);
-    font-family: 'Nanum Myeongjo', serif;
+    font-family: 'Aldrich';
     font-size: 16px;
     line-height: 1.5em;
 }
@@ -22,13 +50,15 @@ body {
         position: absolute;
         width: 100%;
         z-index: 3;
+        animation: fade-down 1s;
     }
         .LogoName {
             display: flex;
             align-items: center;
+            text-align: center;
             text-decoration: none;
             padding: 1.5em 1em;
-            font-size: 1.4rem;
+            font-size: 1.1rem;
             font-weight: 200;
             color: rgb(255, 255, 255);
         }
@@ -75,25 +105,25 @@ body {
             content: '';
             inset: 0;
             background-color: rgba(0, 0, 0, 0.75);
-            opacity: 0.45;
+            opacity: 0.5;
         }
         @media (min-width: 736px) { .Banner { max-height: 79.7vh; height: 100vh !important; padding: 3rem 2rem 7rem;}}
             .Inner {
                 position: relative;
                 width: 100%;
                 z-index: 2;
-               
+                animation: fade-up 0.5s;
             } 
                 .InnerTitle {
                     color: white;
                     line-height: 2.3rem;
                     font-size: 1.8rem;
-                    font-weight: 700;
+                    font-weight: 600;
                 }
-                @media (min-width: 736px) { .InnerTitle { font-size: 4rem; line-height: 4rem;}}
+                @media (min-width: 736px) { .InnerTitle { font-size: 3rem; line-height: 4rem; font-weight: 900;}}
                 .InnerParagraph {
                     line-height: 1.8rem;
-                    font-weight: 500;
+                    font-weight: 100;
                     color: rgba(255, 255, 255, 0.65);
                     margin-bottom: 4rem;
                 }
@@ -104,7 +134,7 @@ body {
                     color: white;
                     appearance: none;
                     cursor: pointer;
-                    font-weight: 500;
+                    font-weight: 200;
                     border-radius: 4px;
                     padding: 1rem;
                 } 
