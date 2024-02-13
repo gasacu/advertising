@@ -141,6 +141,43 @@ body {
                     .GetStartedBtn:hover, .GetStartedBtn:focus-visible {
                         background-color: rgba(161, 150, 136, 0.495);
                     }
+
+        .SectionOne {
+            display: block;
+            background-color: #f2f2f2;
+            position: relative;
+            margin: 0;
+            padding: 3rem 0;
+        }   
+            .Box {
+                display: block;
+                background-color: #fff;
+                width: 90%;
+                margin: 0 auto;
+                padding: 0;
+            }   
+            @media (min-width: 736px) { .Box { width: 80%;}}
+                .BoxImage {
+                    display: block;
+                    margin: 0;
+                    padding: 0;
+                    width: 100%;
+                    border: 0;
+                    position: relative;
+                    height: clamp(100px, 34vw, 25rem);
+                }   
+                .Content {
+                    display: block;
+                    padding: 2rem;
+                }
+                @media (min-width: 736px) { .Content { padding: 4rem;}}
+                    .ContentTitle {
+                        text-align: center;
+                        padding-bottom: 1rem;
+                    }
+                    .ContentParagraph {
+                        padding-top: 1rem;
+                    }
     footer {
 
     }
