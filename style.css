@@ -26,6 +26,18 @@
     src: url('Aldrich.ttf') format('truetype');
 }
 
+@keyframes reveal-header {
+    0% {
+        top: -4em;
+        opacity: 0;
+    }
+
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
+
 html {
     margin: 0;
     padding: 0;
@@ -47,10 +59,16 @@ body {
         margin: 0;
         padding: 0;
         background: transparent;
-        position: absolute;
+        position: fixed;
         width: 100%;
         z-index: 3;
         animation: fade-down 1s;
+        
+    }
+    header.reveal {
+        animation: reveal-header 0.5s ease;
+        background: rgba(0, 0, 0, 0.75);
+        top: 1.5em;
     }
         .LogoName {
             display: flex;
@@ -178,6 +196,90 @@ body {
                     .ContentParagraph {
                         padding-top: 1rem;
                     }
+        .SectionTwo {
+            display: block;
+            margin: 0;
+            padding: 1rem 0;
+            position: relative;
+            background-color: black;
+            color: #bfbfbf;
+            background-image: url(images/bg.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        .SectionTwo::before {
+            display: block;
+            position: absolute;
+            content: '';
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.95);
+            opacity: 0.75;
+        }
+            .SectionBox {
+                display: block;
+                position: relative;
+                width: 100%;
+                margin: 0 auto;
+                padding: 0;
+            }
+                .SectionGrid {
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    flex-flow: column wrap;
+                    justify-content: space-around;
+                    align-items: stretch;
+                    margin: 0 0 2.5rem 0;
+                    padding: 0;
+                    list-style-type: none;
+                }
+                @media (min-width: 1000px) { .SectionGrid {flex-direction: row;}}
+                    .SectionGridItem {
+                        display: block;
+                        border-bottom: 1px solid;
+                        border-color: rgba(255, 255, 255, 0.25);
+                        text-align: center;
+                        padding: 2rem 0;
+                        flex-basis: 20rem;
+                    }
+                    @media (min-width: 1000px) { .SectionGridItem {border-bottom: 0; border-right: 1px solid; border-color: rgba(255, 255, 255, 0.25); padding-right: 2rem;} }
+                    @media (min-width: 1000px) { .SectionGridItem:last-child { border-right: none;} }
+                    @media (min-width: 1000px) { .SectionGridItem { padding-right: 4rem;} }
+                    .SectionGridItem:last-child {
+                        border-bottom: none;
+                    }    
+                        .SectionGridItem h2 {
+                            color: white;
+                            font-weight: 300;
+                        }
+                        .SectionGridItem p {
+                            margin-bottom: 2rem;
+                            font-weight: 100;
+                        }
+                        .SectionGridBtn {
+                            text-decoration: none;
+                            box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.25);
+                            color: #ffffff !important;
+                            width: 80%;
+                            margin: 0 !important;
+                            padding: 0;
+                            appearance: none;
+                            border-radius: 4px;
+                            cursor: pointer;
+                            display: inline-block;
+                            font-weight: 100;
+                            height: 2.85rem;
+                            line-height: 2.95rem;
+                            padding: 0 1.5rem;
+                            text-align: center;
+                            text-decoration: none;
+                            text-transform: uppercase;
+                        }
+                        @media (min-width: 500px) { .SectionGridBtn { width: 8rem;}}
+                        .SectionGridBtn:hover {
+                            background-color: #f2f2f20e;
+                            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+                        }
     footer {
 
     }
