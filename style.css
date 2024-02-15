@@ -56,19 +56,17 @@ body {
     header {
         display: flex;
         justify-content: space-between;
+        position: fixed;
         margin: 0;
         padding: 0;
-        background: transparent;
-        position: fixed;
         width: 100%;
+        top: 0;
         z-index: 3;
         animation: fade-down 1s;
-        
+        transition: 0.6s;
     }
-    header.reveal {
-        animation: reveal-header 0.5s ease;
+    header.sticky {
         background: rgba(0, 0, 0, 0.75);
-        top: 1.5em;
     }
         .LogoName {
             display: flex;
@@ -95,9 +93,48 @@ body {
             cursor: pointer;
         }
         @media (min-width: 736px) { .MenuTrigger { margin-right: 2em; } }
-            .MenuTriggerImage {
-                
+        .MainMenu {
+            display: none; 
+            padding: 1.5rem 0.5rem; 
+            position: absolute;
+            width: 15rem; 
+            height: 100vh;
+            top: 0; 
+            right: 0; 
+            bottom: 0; 
+            left: -300px;
+            transition: 0.4s linear;
+        }
+        .MainMenu.Active { 
+            display: block;
+            position: absolute;
+            left: 0;
+            box-shadow: 0 4em 4em  rgba(0, 0, 0, 0.4); ; 
+            background:  rgba(161, 150, 136, 0.98);   
+        }
+            .MainMenuList {
+                display: block;
+                padding: 1rem;
+                margin: 0;
             }
+                .MainMenuItem {
+                    display: block; 
+                }
+                    .MainMenuItemLink {
+                        display: block; 
+                        padding: 0.5em; 
+                        color: rgba(212, 212, 212, 0.849);
+                        background: transparent;
+                        font-size: 1em; 
+                        font-weight: 600; 
+                        text-decoration: none;
+                        box-shadow: 1px 0 0 rgba(211, 196, 177, 0.21);
+                        transition: .3s;
+                    }
+                    .MainMenuItemLink:hover { 
+                        color:rgb(255, 255, 255);
+                        box-shadow: 1.5px 0 0 rgba(237, 222, 204, 0.918);
+                    }
     main {
         margin: 0;
         padding: 0;
@@ -214,13 +251,15 @@ body {
             inset: 0;
             background-color: rgba(0, 0, 0, 0.95);
             opacity: 0.75;
+            margin: 0;
+            padding: 2rem 0;
         }
             .SectionBox {
                 display: block;
                 position: relative;
-                width: 100%;
+                width: 90%;
                 margin: 0 auto;
-                padding: 0;
+                padding: 0 1rem;
             }
                 .SectionGrid {
                     display: flex;
@@ -229,7 +268,7 @@ body {
                     flex-flow: column wrap;
                     justify-content: space-around;
                     align-items: stretch;
-                    margin: 0 0 2.5rem 0;
+                    margin: 0;
                     padding: 0;
                     list-style-type: none;
                 }
@@ -239,21 +278,23 @@ body {
                         border-bottom: 1px solid;
                         border-color: rgba(255, 255, 255, 0.25);
                         text-align: center;
-                        padding: 2rem 0;
-                        flex-basis: 20rem;
+                        padding: 1.5rem 0;
+                        flex-basis: 15rem;
                     }
-                    @media (min-width: 1000px) { .SectionGridItem {border-bottom: 0; border-right: 1px solid; border-color: rgba(255, 255, 255, 0.25); padding-right: 2rem;} }
+                    @media (min-width: 1000px) { .SectionGridItem {border-bottom: 0; border-right: 1px solid; border-color: rgba(255, 255, 255, 0.25); padding: 1.5rem;} }
                     @media (min-width: 1000px) { .SectionGridItem:last-child { border-right: none;} }
-                    @media (min-width: 1000px) { .SectionGridItem { padding-right: 4rem;} }
+                    @media (min-width: 1200px) { .SectionGridItem { padding-right: 5rem;} }
+                    @media (min-width: 1500px) { .SectionGridItem { padding-right: 7rem;} }
                     .SectionGridItem:last-child {
                         border-bottom: none;
                     }    
                         .SectionGridItem h2 {
                             color: white;
                             font-weight: 300;
+                            margin-bottom: 1.5rem;
                         }
                         .SectionGridItem p {
-                            margin-bottom: 2rem;
+                            margin-bottom: 1.5rem;
                             font-weight: 100;
                         }
                         .SectionGridBtn {
@@ -261,7 +302,7 @@ body {
                             box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.25);
                             color: #ffffff !important;
                             width: 80%;
-                            margin: 0 !important;
+                            margin: 0 0 1rem 0;
                             padding: 0;
                             appearance: none;
                             border-radius: 4px;
@@ -270,12 +311,11 @@ body {
                             font-weight: 100;
                             height: 2.85rem;
                             line-height: 2.95rem;
-                            padding: 0 1.5rem;
                             text-align: center;
                             text-decoration: none;
                             text-transform: uppercase;
                         }
-                        @media (min-width: 500px) { .SectionGridBtn { width: 8rem;}}
+                        @media (min-width: 500px) { .SectionGridBtn { width: 10rem;}}
                         .SectionGridBtn:hover {
                             background-color: #f2f2f20e;
                             transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
