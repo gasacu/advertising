@@ -208,10 +208,11 @@ body {
                 display: block;
                 background-color: #fff;
                 width: 90%;
+                height: 80vh;
                 margin: 0 auto;
                 padding: 0;
             }   
-            @media (min-width: 736px) { .Box { width: 80%;}}
+            @media (min-width: 736px) { .Box { width: 80%; height: 90vh;}}
                 .BoxImage {
                     display: block;
                     margin: 0;
@@ -219,7 +220,7 @@ body {
                     width: 100%;
                     border: 0;
                     position: relative;
-                    height: clamp(100px, 34vw, 25rem);
+                    height: clamp(100px, 30vw, 18rem);
                 }   
                 .Content {
                     display: block;
@@ -340,26 +341,31 @@ body {
             .SectionThreeBox {
                 display: block;
                 width: 90%;
+                height: 80vh;
                 margin: 0 auto;
                 padding: 0;
             }        
-            @media (min-width: 736px) { .SectionThreeBox { width: 90%;}}
+            @media (min-width: 736px) { .SectionThreeBox { width: 80%; height: 90vh;}}
                 .SectionThreeGrid {
                         display: block;
                         margin: 0 auto 3rem auto;
                         padding: 0;
                         list-style-type: none;
                 }      
-                @media (min-width: 1000px) { .SectionThreeGrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(600px, 1fr)); }}
+                @media (min-width: 1000px) { .SectionThreeGrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(400px, 2fr)); justify-content: end;}}
+                @media (min-width: 1500px) { .SectionThreeGrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(600px, 2fr)); justify-content: end;}}
+                @media (min-width: 1000px) { .SectionThreeGrid:last-child {margin-right: 0;} }    
                     .SectionThreeGridItem {
                         display: block;
                         clear: both;
-                        margin: 2rem;
+                        margin-top: 2rem;
                         background-color: #fff;
                         font-size: clamp(1rem, 8vw, 8rem);
                     }   
+                    @media (min-width:1000px) { .SectionThreeGridItem {margin-right: 2rem; height: 90vh; }}
                     .SectionThreeGridItem:last-child {
                         margin-bottom: 0;
+                        margin-right: 0;
                     }   
                     @media (min-width: 1000px) { .SectionThreeGridItem:last-child { margin-bottom: 2rem;}}
                         .SectionThreeBoxImage {
@@ -367,18 +373,18 @@ body {
                             margin: 0;
                             padding: 0;
                             width: 100%;
+                            height: clamp(200px, 30vw, 13rem);
                             border: 0;
                             position: relative;
                         }   
                             .SectionThreeContentTitle {
                                 text-align: center;
-                                padding-bottom: 0.5rem;
+                                
                                 color: #999999;
                                 font-weight: 500;
                                 font-size: 1rem;
                             }
                             .SectionThreeContentParagraph {
-                               
                                 color: #999999;
                                 font-weight: 100;
                                 font-size: 0.9rem;
