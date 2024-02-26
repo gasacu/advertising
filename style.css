@@ -519,8 +519,10 @@ body {
                             background: rgba(144, 144, 144, 0.075);
                             border-color: rgba(144, 144, 144, 0.25);
                             width: 254px;
-                            height: 62px;
+                            height: 80px;
                         }
+                        @media (min-width: 700px) { .SectionFiveFormField textarea { width: 500px; height: 80px;} } 
+                        @media (min-width: 1000px) { .SectionFiveFormField textarea { width: 700px; height: 100px;} } 
                         @media (min-width: 1000px) { .Half { display: inline-block; width: 45%; margin-bottom: 2rem; margin-right: 2.5%;}}
                         .SectionFiveFormButton {
                             display: block;
@@ -543,5 +545,14 @@ body {
                         @media (min-width: 500px) { .SectionFiveFormButton { max-width: 15rem;}}
                             
     footer {
-
+        display: block;
+        background: #f2f2f2;
+        color: #bbb;
+        font-size: 0.9rem;
+        padding: 0 0 2rem 0;
+        text-align: center;
     }
+        .SectionFooterLink{
+            text-decoration: none;
+            color: rgb(116, 108, 96);
+        }
