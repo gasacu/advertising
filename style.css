@@ -159,8 +159,8 @@ body {
             position: absolute;
             content: '';
             inset: 0;
-            background-color: rgba(0, 0, 0, 0.75);
-            opacity: 0.5;
+            background-color: rgb(9, 15, 25);
+            opacity: 0.8;
         }
         @media (min-width: 736px) { .Banner { max-height: 79.7vh; height: 100vh !important; }}
             .Inner {
