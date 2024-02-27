@@ -182,7 +182,8 @@ body {
                     color: rgba(255, 255, 255, 0.65);
                     margin-bottom: 4rem;
                 }
-                @media (min-width: 736px) { .InnerParagraph { font-size: 1.5rem; line-height: 2.5rem; margin-bottom: 5rem;}}
+                @media (min-width: 736px) { .InnerParagraph { font-size: 1.5rem; line-height: 2.5rem; margin-bottom: 4rem;}}
+                @media (min-width: 1000px) { .InnerParagraph { margin-bottom: 5rem; }}
                 .GetStartedBtn {
                     text-decoration: none;
                     background-color: rgb(161, 150, 136);
@@ -193,6 +194,7 @@ body {
                     border-radius: 4px;
                     padding: 1rem;
                 } 
+                @media (min-width: 736px) { .GetStartedBtn { margin-bottom: 1rem; }}
                     .GetStartedBtn:hover, .GetStartedBtn:focus-visible {
                         background-color: rgba(161, 150, 136, 0.495);
                     }
@@ -528,7 +530,7 @@ body {
                         .SectionFiveFormButton {
                             display: block;
                             text-decoration: none;
-                            background-color: rgb(161, 150, 136);
+                            background-color: rgba(161, 150, 136, 0.908);
                             color: white;
                             appearance: none;
                             cursor: pointer;
@@ -541,7 +543,7 @@ body {
                            margin: 0 auto;
                         }
                         .SectionFiveFormButton:hover, .SectionFiveFormButton:focus-visible {
-                            background-color: rgba(161, 150, 136, 0.895);
+                            background-color: rgba(161, 150, 136);
                         }
                         @media (min-width: 500px) { .SectionFiveFormButton { max-width: 13rem;}}
                             
