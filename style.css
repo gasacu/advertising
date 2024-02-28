@@ -159,7 +159,7 @@ body {
             position: absolute;
             content: '';
             inset: 0;
-            background-color: rgb(9, 15, 25);
+            background-color: rgb(0, 0, 0);
             opacity: 0.8;
         }
         @media (min-width: 736px) { .Banner { max-height: 79.7vh; height: 100vh !important; }}
@@ -210,7 +210,6 @@ body {
                 display: block;
                 background-color: #fff;
                 width: 90%;
-                
                 margin: 0 auto;
                 padding: 0;
             }   
@@ -237,13 +236,13 @@ body {
                     .ContentTitle {
                         text-align: center;
                         padding-bottom: 1rem;
-                        color: #999999;
+                        color: #595959;
                         font-weight: 500;
                         font-size: 1rem;
                     }
                     .ContentParagraph {
                         padding-top: 1rem;
-                        color: #999999;
+                        color: #595959;
                         font-weight: 100;
                         font-size: 0.9rem;
                     }
@@ -380,7 +379,7 @@ body {
                         }   
                             .SectionThreeContentTitle {
                                 text-align: center;
-                                color: #999999;
+                                color: #595959;
                                 font-weight: 500;
                                 font-size: 1rem;
                             }
@@ -388,7 +387,7 @@ body {
                                 color: black;
                             }
                             .SectionThreeContentParagraph {
-                                color: #999999;
+                                color: #595959;
                                 font-weight: 100;
                                 font-size: 0.9rem;
                             }
@@ -461,7 +460,7 @@ body {
                     .SectionFiveTitle {
                         display: block;
                         text-align: center;
-                        color: #555;
+                        color: #595959;
                         font-size: 1.5rem;
                         font-weight: 400;
                         line-height: 1.5;
@@ -480,7 +479,7 @@ body {
                         }
                         .SectionFiveFormField label{
                             display: block;
-                            color: #555;
+                            color: #595959;
                             font-size: 0.9rem;
                             font-weight: 400;
                             margin: 0 0 1rem 0;
@@ -530,7 +529,7 @@ body {
                         .SectionFiveFormButton {
                             display: block;
                             text-decoration: none;
-                            background-color: rgba(161, 150, 136, 0.908);
+                            background-color: #474d57;
                             color: white;
                             appearance: none;
                             cursor: pointer;
@@ -543,7 +542,7 @@ body {
                            margin: 0 auto;
                         }
                         .SectionFiveFormButton:hover, .SectionFiveFormButton:focus-visible {
-                            background-color: rgba(161, 150, 136);
+                            background-color: #2f343bed;
                         }
                         @media (min-width: 500px) { .SectionFiveFormButton { max-width: 13rem;}}
                             
@@ -557,5 +556,5 @@ body {
     }
         .SectionFooterLink{
             text-decoration: none;
-            color: rgb(116, 108, 96);
+            color: #474d57;
         }
